@@ -3,13 +3,13 @@ import { Container, Title, Content, Description, PhotosContainer, Button, Photo,
 
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 
-import Todo1 from '../../assets/projects/todo/resized/1.png'
-import Todo2 from '../../assets/projects/todo/resized/2.png'
-import Todo3 from '../../assets/projects/todo/resized/3.png'
-import Todo4 from '../../assets/projects/todo/resized/4.png'
-import Todo5 from '../../assets/projects/todo/resized/5.png'
-import Todo6 from '../../assets/projects/todo/resized/6.png'
-import Todo7 from '../../assets/projects/todo/resized/7.png'
+import Moto1 from '../../assets/projects/motoapp/1.png'
+import Moto2 from '../../assets/projects/motoapp/2.png'
+import Moto3 from '../../assets/projects/motoapp/3.png'
+import Moto4 from '../../assets/projects/motoapp/4.png'
+import Moto5 from '../../assets/projects/motoapp/5.png'
+import Moto6 from '../../assets/projects/motoapp/6.png'
+import Moto7 from '../../assets/projects/motoapp/7.png'
 
 import githubLogo from '../../assets/icons/github.png';
 import expoLogo from '../../assets/icons/expo.png';
@@ -54,7 +54,7 @@ const Slideshow = ({ imgs }: any) => {
     )
 }
 
-export default function TodoApp() {
+export default function MotoApp() {
 
     // Funções de window.width
 
@@ -79,29 +79,29 @@ export default function TodoApp() {
 
     return (
         <Container>
-            <Title>To do</Title>
+            <Title>Moto App</Title>
 
             <Content>
                 {windowSize.innerWidth >= 1200 ?
                     (
                         <PhotosContainer>
-                            <Photo src={Todo2} />
-                            <Photo src={Todo3} />
-                            <Photo src={Todo5} />
-                            <Photo src={Todo7} />
+                            <Photo src={Moto1} />
+                            <Photo src={Moto3} />
+                            <Photo src={Moto7} />
+                            <Photo src={Moto5} />
                         </PhotosContainer>
                     )
                     :
                     (
                         <Slideshow
                             imgs={[
-                                Todo1,
-                                Todo2,
-                                Todo3,
-                                Todo4,
-                                Todo5,
-                                Todo6,
-                                Todo7
+                                Moto1,
+                                Moto2,
+                                Moto3,
+                                Moto4,
+                                Moto5,
+                                Moto6,
+                                Moto7
                             ]}
                         />
                     )
@@ -109,17 +109,18 @@ export default function TodoApp() {
 
                 <Description>
                     <Text>
-                        Aplicativo de Lista de tarefas, armazenando os dados em um array simulando um banco de dados. Funções para excluir e marcar uma tarefa como feita. <br/>
-                        Também possui validação, para não permitir inserir uma tarefa sem texto nenhum, ou inserir uma tarefa já cadastrada.
+                        Aplicativo de motos, podendo listar todas ou filtrar dependendo de sua preferência. É possível filtrar por cilindrada, fabricante e categoria. <br/>
+                        Criei um arquivo 'data.ts' para servir como se fosse dados vindos de uma API, então listei os modelos usando o método map. <br/>
+                        Utilizei styled-components, e passei os parâmetros da página de detalhes através do react navigation.
                     </Text>
 
                     
-                    <Github href='https://github.com/gabrielmancano/todoapp' target='_blank' rel='noreferrer'>
+                    <Github href='https://github.com/gabrielmancano/motoapp' target='_blank' rel='noreferrer'>
                         <GithubLogo src={githubLogo} />
                         GITHUB
                     </Github>
 
-                    <Github href='https://expo.dev/@gabrielmancano/todoapp' target='_blank' rel='noreferrer'>
+                    <Github href='https://expo.dev/@gabrielmancano/motoapp' target='_blank' rel='noreferrer'>
                         <GithubLogo src={expoLogo} />
                         EXPO GO
                     </Github>
